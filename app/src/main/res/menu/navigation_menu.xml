@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <!--Admin Settings-->
+    <!--    <item android:title="School and Collage">
+
+            <menu>
+                <item
+                    android:id="@+id/nav_psc"
+                    android:icon="@drawable/ic_govt"
+                    android:title="PSC Notice" />
+                <item
+                    android:id="@+id/nav_jsc"
+                    android:icon="@drawable/ic_govt"
+                    android:title="JSC Notice" />
+                <item
+                    android:id="@+id/nav_ssc"
+                    android:icon="@drawable/ic_govt"
+                    android:title="SSC Notice" />
+                <item
+                    android:id="@+id/nav_hsc"
+                    android:icon="@drawable/ic_govt"
+                    android:title="HSC Notice" />
+
+            </menu>
+        </item>
+
+
+        <item android:title="National University">
+
+            <menu>
+
+                <item
+                    android:id="@+id/nav_nu_notice"
+                    android:icon="@drawable/ic_govt"
+                    android:title="NU Admission Notice" />
+            </menu>
+        </item>-->
+
+    <item android:title="যোগাযোগ">
+        <menu>
+            <item
+                android:id="@+id/nav_admin"
+                android:icon="@drawable/ic_admin"
+                android:title="এডমিন" />
+            <item
+                android:id="@+id/nav_privacy"
+                android:icon="@drawable/ic_privacy"
+                android:title="প্রাইভেসি পলিসি" />
+            <item
+                android:id="@+id/nav_comment"
+                android:icon="@drawable/ic_comment"
+                android:title="মতামত লিখুন" />
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_share"
+                android:title="শেয়ার করুন" />
+            <item
+                android:id="@+id/nav_rate"
+                android:icon="@drawable/ic_rate"
+                android:title="রেটিং দিন" />
+        </menu>
+    </item>
+
+
+</menu>
