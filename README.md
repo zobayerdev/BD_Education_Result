@@ -1,7 +1,4 @@
 # BD_Education_Result
-<<<<<<< HEAD
-# See all result in this application
-=======
 
 # Made With
 ![forthebadge](https://img.shields.io/badge/Android_Studio-5C2D91?style=for-the-badge&logo=android%20studio&logoColor=white)
