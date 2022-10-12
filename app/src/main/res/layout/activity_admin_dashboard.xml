@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".AdminDashboard">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="340dp"
+        app:cardElevation="50dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/nayem_image"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Developer"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name: Md. Zobayer Hasan Nayem"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Software Developer of Trodev"
+                android:textSize="13sp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I am Md. Zobayer Hasan Nayem, Now I am currently studying Computer Science and Technology at Bangladesh University Business and Technology."
+                android:textSize="10sp"
+                android:layout_marginTop="10dp"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address: Mirpur-02, Rupnagar Abasik Area"
+                android:textSize="11sp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact: +8801615257555"
+                android:textSize="11sp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gmail: zobayer.dev@gmail.com"
+                android:textSize="11sp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

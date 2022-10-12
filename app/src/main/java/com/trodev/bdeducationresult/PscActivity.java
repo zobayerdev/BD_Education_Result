@@ -1,11 +1,19 @@
 package com.trodev.bdeducationresult;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
+import android.Manifest;
+import android.app.AlertDialog;
 import android.app.DownloadManager;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Log;
 import android.view.View;
 import android.webkit.CookieManager;
 import android.webkit.DownloadListener;
@@ -18,10 +26,8 @@ import android.widget.Toast;
 
 public class PscActivity extends AppCompatActivity {
 
-    private WebView web;
-    String webUrl = "http://180.211.137.51/ResultSingle.aspx";
-
-    private ProgressDialog pd;
+    private static final String TAG = "AndroidRide";
+    private WebView webview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,103 +38,121 @@ public class PscActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("পিএসসি রেজাল্ট");
 
 
-        web = findViewById(R.id.webPSC);
-        web.loadUrl(webUrl);
+         // ###########################################################
+        // locate your Web ID...
+        webview = (WebView) findViewById(R.id.webPSC);
 
-        pd = new ProgressDialog(this);
-        pd.setMessage("অনুগ্রহ করে অপেক্ষা করুন");
+        // ###########################################################
+        // WebSite Address Here
+        // webview.loadUrl("http://180.211.137.51/ResultSingle.aspx");
+        webview.loadUrl("http://180.211.137.51/ResultSingle.aspx");
+        // webview.loadUrl("https://annex.bubt.edu.bd/");
+        //############################################################
 
-        WebSettings mywebsetting = web.getSettings();
+        // if you set this size in your website, Fixed it or don't use this
+        webview.setInitialScale(90);
+
+        //#############################################################
+        // Website Zoom control
+        // webview.getSettings().setBuiltInZoomControls(true);
+
+
+        //#############################################################
+        // extra Code of webview
+        webview.setWebViewClient(new WebViewClient());
+        WebSettings mywebsetting = webview.getSettings();
         mywebsetting.setJavaScriptEnabled(true);
 
-        mywebsetting.setPluginState(WebSettings.PluginState.ON);
-        web.getSettings().setLoadWithOverviewMode(true);
-
-        //এইখানে আমাদের ওয়েবসাইট গুলো সাইজ দেওয়া হয়েছে।
-        web.setInitialScale(120);
-        // Zoom Website
-        web.getSettings().setBuiltInZoomControls(true);
-        web.setWebViewClient(new WebViewClient());
-
-        web.setWebViewClient(new pdweb(pd));
-        pd.setCanceledOnTouchOutside(false);
-
-        //
-/*        web.getSettings().setAllowFileAccess(true);
-        web.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
-        web.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
-        web.getSettings().setAppCacheEnabled(true);
-        web.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+        webview.getSettings().setAllowFileAccess(true);
+        webview.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
+        webview.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+        webview.getSettings().setAppCacheEnabled(true);
+        webview.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
         mywebsetting.setDomStorageEnabled(true);
         mywebsetting.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
         mywebsetting.setUseWideViewPort(true);
         mywebsetting.setSavePassword(true);
         mywebsetting.setSaveFormData(true);
-        mywebsetting.setEnableSmoothTransition(true);*/
+        mywebsetting.setEnableSmoothTransition(true);
 
 
-
-        web.setDownloadListener(new DownloadListener() {
+        // ############################## Download Code is Here ####################################
+        // Download any File in this website.
+        webview.setDownloadListener(new DownloadListener() {
             @Override
-            public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimeType, long contentLength) {
-
-                DownloadManager.Request request = new DownloadManager.Request ( Uri.parse( url ) );
-
-                request.setMimeType( mimeType );
-                String cookies = CookieManager.getInstance ().getCookie( url );
-                request.addRequestHeader("cookic", cookies );
-
-                request.addRequestHeader("User-Agent",userAgent );
-                request.setDescription( "Download File..." );
-
-                request.setTitle(URLUtil.guessFileName ( url, contentDisposition, mimeType ) );
-                request.allowScanningByMediaScanner ();
-                request.setNotificationVisibility ( DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED );
-                request.setDestinationInExternalPublicDir ( Environment.DIRECTORY_DOWNLOADS, URLUtil.guessFileName( url, contentDisposition, mimeType));
-                DownloadManager dm = (DownloadManager) getSystemService( DOWNLOAD_SERVICE );
-                dm.enqueue( request );
-                Toast.makeText ( PscActivity.this, "Downloading File", Toast.LENGTH_SHORT ).show();
+            public void onDownloadStart(final String url, final String userAgent, String contentDisposition, String mimetype, long contentLength) {
+                //Checking runtime permission for devices above Marshmallow.
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                            == PackageManager.PERMISSION_GRANTED) {
+                        Log.v(TAG, "Permission is granted");
+                        downloadDialog(url, userAgent, contentDisposition, mimetype);
+                    } else {
+                        Log.v(TAG, "Permission is revoked");
+                        //requesting permissions.
+                        ActivityCompat.requestPermissions(PscActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+                    }
+                } else {
+                    //Code for devices below API 23 or Marshmallow
+                    Log.v(TAG, "Permission is granted");
+                    downloadDialog(url, userAgent, contentDisposition, mimetype);
+                }
             }
         });
-
-
     }
 
-    public class pdweb extends WebViewClient{
-        ProgressDialog pd;
-        public pdweb (ProgressDialog pd){
-            this.pd = pd;
-            pd.show();
-        }
-
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
-
-            view.loadUrl(webUrl);
-            return super.shouldOverrideUrlLoading(view, webUrl);
-        }
-
-        @Override
-        public void onPageFinished(WebView view, String url) {
-            super.onPageFinished(view, url);
-            if(pd.isShowing()){
-                pd.dismiss();
+    public void downloadDialog(final String url, final String userAgent, String contentDisposition, String mimetype) {
+        //getting filename from url.
+        final String filename = URLUtil.guessFileName(url, contentDisposition, mimetype);
+        //alertdialog
+        AlertDialog.Builder builder = new AlertDialog.Builder(PscActivity.this);
+        //title of alertdialog
+        builder.setTitle("Download File");
+        //message of alertdialog
+        builder.setMessage("Do you want to download " + filename);
+        //if Yes button clicks.
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //DownloadManager.Request created with url.
+                DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
+                //cookie
+                String cookie = CookieManager.getInstance().getCookie(url);
+                //Add cookie and User-Agent to request
+                request.addRequestHeader("Cookie", cookie);
+                request.addRequestHeader("User-Agent", userAgent);
+                //file scanned by MediaScannar
+                request.allowScanningByMediaScanner();
+                //Download is visible and its progress, after completion too.
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                //DownloadManager created
+                DownloadManager downloadManager = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
+                //Saving files in Download folder
+                request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, filename);
+                //download enqued
+                downloadManager.enqueue(request);
             }
-        }
-
-
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //cancel the dialog if Cancel clicks
+                dialog.cancel();
+            }
+        });
+        //alertdialog shows.
+        builder.create().show();
     }
 
+
+    // One-BackPress Method is here....
     @Override
     public void onBackPressed() {
-        if(web.canGoBack())
-        {
-            web.goBack();
-        }
-        else
-        {
+        if (webview.canGoBack()) {
+            webview.goBack();
+            webview.clearCache(true);
+        } else {
             super.onBackPressed();
         }
-
     }
 }

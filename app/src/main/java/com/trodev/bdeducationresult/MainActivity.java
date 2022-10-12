@@ -229,6 +229,7 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.nav_admin:
                 Toast.makeText(this, "স্বাগতম, এডমিন এর সাথে যোগাযোগ করুন", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, AdminDashboard.class));
                 break;
 
             case R.id.nav_share:

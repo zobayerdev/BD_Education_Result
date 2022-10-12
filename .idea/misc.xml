@@ -3,10 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GItHub/Android Apllication/BD_Education_Result/app/src/main/res/drawable/bg.xml" value="0.165" />
+        <entry key="..\:/GItHub/Android Apllication/BD_Education_Result/app/src/main/res/layout/activity_admin.xml" value="0.209375" />
+        <entry key="..\:/GItHub/Android Apllication/BD_Education_Result/app/src/main/res/layout/activity_admin_dashboard.xml" value="0.25" />
+        <entry key="..\:/GItHub/Android Apllication/BD_Education_Result/app/src/main/res/layout/activity_hsc.xml" value="0.209375" />
+        <entry key="..\:/GItHub/Android Apllication/BD_Education_Result/app/src/main/res/layout/activity_jsc.xml" value="0.209375" />
         <entry key="..\:/GItHub/Android Apllication/BD_Education_Result/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/GItHub/Android Apllication/BD_Education_Result/app/src/main/res/layout/activity_mbbs.xml" value="0.209375" />
+        <entry key="..\:/GItHub/Android Apllication/BD_Education_Result/app/src/main/res/layout/activity_nu.xml" value="0.209375" />
+        <entry key="..\:/GItHub/Android Apllication/BD_Education_Result/app/src/main/res/layout/activity_psc.xml" value="0.209375" />
         <entry key="..\:/GItHub/Android Apllication/BD_Education_Result/app/src/main/res/layout/activity_splash_screen.xml" value="0.209375" />
         <entry key="..\:/GItHub/Android Apllication/BD_Education_Result/app/src/main/res/layout/activity_ssc.xml" value="0.209375" />
         <entry key="..\:/GItHub/Android Apllication/BD_Education_Result/app/src/main/res/layout/activity_web.xml" value="0.209375" />
+        <entry key="..\:/GItHub/Android Apllication/BD_Education_Result/app/src/main/res/menu/navigation_menu.xml" value="0.209375" />
         <entry key="..\:/GItHub/BDEducationResult/app/src/main/res/drawable/custom_input.xml" value="0.168" />
         <entry key="..\:/GItHub/BDEducationResult/app/src/main/res/layout/activity_cgpa.xml" value="0.25" />
         <entry key="..\:/GItHub/BDEducationResult/app/src/main/res/layout/activity_hsc.xml" value="0.19479166666666667" />
