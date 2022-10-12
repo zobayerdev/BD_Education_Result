@@ -64,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     showPopupMessage();
                 }
-
             }
         });
 
@@ -78,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     showPopupMessage();
                 }
-
             }
         });
 
@@ -182,10 +180,9 @@ public class MainActivity extends AppCompatActivity {
                         dialogInterface.dismiss();
                     }
                 })
-                .setNegativeButton("Cencel", null)
+                .setNegativeButton("Cancel", null)
                 .setIcon(R.drawable.ic_nonet)
                 .show();
-
     }
 
     public boolean isOnline() {
@@ -236,7 +233,7 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.nav_share:
                 try {
-/*                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
+/*                  Intent shareIntent = new Intent(Intent.ACTION_SEND);
                     shareIntent.setType("text/plain");
                     shareIntent.putExtra(Intent.EXTRA_SUBJECT, "The Holy Quran -Islamic App");
                     String shareMessage = "\nThe Holy Quran -Islamic App অ্যাপটি ডাউনলোড করুন\n\n";
@@ -251,7 +248,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.nav_comment:
-                Toast.makeText(this, "মতামত লিখুন", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "শীগ্রহী আসবে...", Toast.LENGTH_SHORT).show();
+              //  startActivity(new Intent(MainActivity.this,WebActivity.class));
                 break;
 
             case R.id.nav_privacy:
