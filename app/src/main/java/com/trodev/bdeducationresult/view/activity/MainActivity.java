@@ -1,4 +1,4 @@
-package com.trodev.bdeducationresult;
+package com.trodev.bdeducationresult.view.activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -7,28 +7,26 @@ import androidx.cardview.widget.CardView;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.trodev.bdeducationresult.R;
+import com.trodev.bdeducationresult.utils.AppConstant;
+import com.trodev.bdeducationresult.view.admin.AdminDashboard;
 
 import java.util.Objects;
 
@@ -59,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (isOnline()) {
-                    startActivity(new Intent(MainActivity.this, PscActivity.class));
+                    openWebViewForResult(AppConstant.PSC_TITLE,AppConstant.PSC_RESULT);
+
                     Toast.makeText(MainActivity.this, "PSC এর ফলাফল দেখুন", Toast.LENGTH_SHORT).show();
                 } else {
                     showPopupMessage();
@@ -72,7 +71,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (isOnline()) {
-                    startActivity(new Intent(MainActivity.this, JscActivity.class));
+                    openWebViewForResult(AppConstant.JSC_TITLE,AppConstant.JSC_RESULT);
+
                     Toast.makeText(MainActivity.this, "JSC এর ফলাফল দেখুন", Toast.LENGTH_SHORT).show();
                 } else {
                     showPopupMessage();
@@ -85,7 +85,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (isOnline()) {
-                    startActivity(new Intent(MainActivity.this, SscActivity.class));
+                    openWebViewForResult(AppConstant.SSC_TITLE,AppConstant.SSC_RESULT);
+
                     Toast.makeText(MainActivity.this, "SSC এর ফলাফল দেখুন", Toast.LENGTH_SHORT).show();
                 } else {
                     showPopupMessage();
@@ -98,7 +99,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (isOnline()) {
-                    startActivity(new Intent(MainActivity.this, HscActivity.class));
+                    openWebViewForResult(AppConstant.HSC_TITLE,AppConstant.HSC_RESULT);
+
                     Toast.makeText(MainActivity.this, "HSC এর ফলাফল দেখুন", Toast.LENGTH_SHORT).show();
                 } else {
                     showPopupMessage();
@@ -112,7 +114,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (isOnline()) {
-                    startActivity(new Intent(MainActivity.this, NuActivity.class));
+                    openWebViewForResult(AppConstant.NU_TITLE,AppConstant.NU_RESULT);
+
                     Toast.makeText(MainActivity.this, "NU এর ফলাফল দেখুন", Toast.LENGTH_SHORT).show();
                 } else {
                     showPopupMessage();
@@ -125,7 +128,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 if (isOnline()) {
-                    startActivity(new Intent(MainActivity.this, MbbsActivity.class));
+                    openWebViewForResult(AppConstant.MBBS_TITLE,AppConstant.MBBS_RESULT);
+
                     Toast.makeText(MainActivity.this, "MBBS এর ফলাফল দেখুন", Toast.LENGTH_SHORT).show();
                 } else {
                     showPopupMessage();
@@ -169,6 +173,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void openWebViewForResult(String title, String resultSite) {
+        Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
+        intent.putExtra(AppConstant.TITLE,title);
+        intent.putExtra(AppConstant.WEBSITE,resultSite);
+        startActivity(intent);
+    }
+
     private void showPopupMessage() {
         new AlertDialog.Builder(this)
                 .setTitle("No Internet..")
@@ -192,6 +203,7 @@ public class MainActivity extends AppCompatActivity {
         return networkInfo != null && networkInfo.isConnected();
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 

@@ -1,4 +1,4 @@
-package com.trodev.bdeducationresult;
+package com.trodev.bdeducationresult.view.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.trodev.bdeducationresult.R;
 
 public class CgpaActivity extends AppCompatActivity {
 

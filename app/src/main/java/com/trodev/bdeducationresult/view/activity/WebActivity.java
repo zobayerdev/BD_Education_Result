@@ -1,4 +1,4 @@
-package com.trodev.bdeducationresult;
+package com.trodev.bdeducationresult.view.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,6 +16,8 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
+
+import com.trodev.bdeducationresult.R;
 
 public class WebActivity extends AppCompatActivity {
 
