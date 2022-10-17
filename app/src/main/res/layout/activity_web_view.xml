@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PscActivity">
-
+    tools:context=".view.activity.WebViewActivity">
 
     <WebView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/webPSC"
+        android:id="@+id/webView"
         />
 
 </LinearLayout>

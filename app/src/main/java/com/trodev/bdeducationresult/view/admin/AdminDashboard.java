@@ -1,8 +1,10 @@
-package com.trodev.bdeducationresult;
+package com.trodev.bdeducationresult.view.admin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.trodev.bdeducationresult.R;
 
 public class AdminDashboard extends AppCompatActivity {
 
