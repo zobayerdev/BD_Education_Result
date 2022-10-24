@@ -14,7 +14,7 @@ You can also download any notice in this application. Thank you.
 [Download Now](https://codeload.github.com/zobayerdev/BD_Education_Result/zip/refs/heads/main)
 
 # Contributing
-Your contributions are always welcome!
+Your contributions are always welcome! See the [contributing guide](CONTRIBUTING.md) for detailed instructions on how to get started with our project.
 
 # License
 BUBT - [Md. Zobayer Hasan Nayem](https://github.com/zobayerdev/)
