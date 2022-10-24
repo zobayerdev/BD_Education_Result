@@ -28,7 +28,8 @@
             android:parentActivityName=".view.activity.MainActivity"/>
         <activity
             android:name=".view.admin.AdminDashboard"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".view.activity.MainActivity" />
         <activity
             android:name=".view.activity.WebActivity"
             android:exported="false" />

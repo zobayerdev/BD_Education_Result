@@ -91,6 +91,7 @@
                 android:fontFamily="@font/ubuntu_bold"
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/black"
+                android:textIsSelectable="true"
                 />
 
             <TextView
@@ -102,6 +103,7 @@
                 android:fontFamily="@font/ubuntu_bold"
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/black"
+                android:textIsSelectable="true"
                 />
 
         </LinearLayout>
