@@ -26,9 +26,34 @@ BUBT - [Md. Zobayer Hasan Nayem](https://github.com/zobayerdev/)
 [![forthebadge](https://img.shields.io/badge/Instagram-D14836?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/zobayerdev/)
 
 
-<img src="https://user-images.githubusercontent.com/74914169/195452065-24b3df92-aafe-4e83-ac98-ce5611b210bb.gif" width=25% height=25%>
-<img src="https://user-images.githubusercontent.com/74914169/189493485-16744e32-a81b-447b-869b-0bbdba2fd4cf.jpg" width=25% height=25%>
-<img src="https://user-images.githubusercontent.com/74914169/189493488-a86c43b3-6407-4be8-9261-176213a90e9b.jpg" width=25% height=25%>
-<img src="https://user-images.githubusercontent.com/74914169/189493487-6e151eb5-3e75-42c7-a4df-96d84e4b5b72.jpg" width=25% height=25%>
-<img src="https://user-images.githubusercontent.com/74914169/189493489-7eb706f4-bff0-41da-98f4-05fbe028f7d0.jpg" width=25% height=25%>
-<img src="https://user-images.githubusercontent.com/74914169/189493481-49f3a2c7-41c8-428e-a656-331ee0a66d35.jpg" width=25% height=25%>
+# App Demo Video & Screenshots:
+
+| DEMO VIDEO (GIF) | Home Screen |  App Drawer Screen | 
+| :---:       |    :----:   | :----:   | 
+| <img src="https://user-images.githubusercontent.com/74914169/195452065-24b3df92-aafe-4e83-ac98-ce5611b210bb.gif" >       |  <img src="https://user-images.githubusercontent.com/74914169/189493485-16744e32-a81b-447b-869b-0bbdba2fd4cf.jpg" >     |  <img src="https://user-images.githubusercontent.com/74914169/189493488-a86c43b3-6407-4be8-9261-176213a90e9b.jpg" >  |
+| Result Search Screen | No Internet Alert |  CGPA Calculator Screen | 
+| <img src="https://user-images.githubusercontent.com/74914169/189493487-6e151eb5-3e75-42c7-a4df-96d84e4b5b72.jpg" >      |  <img src="https://user-images.githubusercontent.com/74914169/189493489-7eb706f4-bff0-41da-98f4-05fbe028f7d0.jpg" >    |  <img src="https://user-images.githubusercontent.com/74914169/189493481-49f3a2c7-41c8-428e-a656-331ee0a66d35.jpg" >  |
+
+
+
+
+<h1 align=center> Project Maintainer ❤️ </h1>
+<p align="center">
+<table align="center">
+  <tbody><tr>
+     <td align="center"><a href="https://github.com/zobayerdev"><img alt="" src="https://avatars.githubusercontent.com/zobayerdev" width="125px;"><br><sub><b> Md. Zobayer Hasan Nayem </b></sub></a><br></td> </a></td>
+
+</tbody></table>
+
+
+<h1 align=center>VALUABLE CONTRIBUTORS✨</h1>
+<p align="center">
+  
+	
+<a href="https://github.com/zobayerdev/BD_Education_Result/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=zobayerdev/BD_Education_Result" />
+</a>
+</p>
+<h3 align="center"> Happy Coding 👨‍💻 </h3>
+
+
