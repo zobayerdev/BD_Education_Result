@@ -21,6 +21,10 @@ BUBT - [Md. Zobayer Hasan Nayem](https://github.com/zobayerdev/)
 
 # Contact
 [![forthebadge](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](https://mail.google.com/mail/?view=cm&fs=1&to=zobayer.dev@gmail.com)
+[![forthebadge](https://img.shields.io/badge/Facebook-D14836?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/zobayerdev/)
+[![forthebadge](https://img.shields.io/badge/LinkedIn-D14836?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/zobayerdev/)
+[![forthebadge](https://img.shields.io/badge/Instagram-D14836?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/zobayerdev/)
+
 
 <img src="https://user-images.githubusercontent.com/74914169/195452065-24b3df92-aafe-4e83-ac98-ce5611b210bb.gif" width=25% height=25%>
 <img src="https://user-images.githubusercontent.com/74914169/189493485-16744e32-a81b-447b-869b-0bbdba2fd4cf.jpg" width=25% height=25%>
