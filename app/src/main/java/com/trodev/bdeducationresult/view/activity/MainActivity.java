@@ -24,6 +24,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.trodev.bdeducationresult.BuildConfig;
 import com.trodev.bdeducationresult.R;
 import com.trodev.bdeducationresult.utils.AppConstant;
 import com.trodev.bdeducationresult.view.admin.AdminDashboard;
@@ -240,40 +241,38 @@ public class MainActivity extends AppCompatActivity {
 
 
             case R.id.nav_admin:
-                Toast.makeText(this, "স্বাগতম, এডমিন এর সাথে যোগাযোগ করুন", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, AdminDashboard.class));
                 break;
 
             case R.id.nav_share:
                 try {
-/*                  Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                  Intent shareIntent = new Intent(Intent.ACTION_SEND);
                     shareIntent.setType("text/plain");
-                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "The Holy Quran -Islamic App");
-                    String shareMessage = "\nThe Holy Quran -Islamic App অ্যাপটি ডাউনলোড করুন\n\n";
+                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "BD Education Resul App");
+                    String shareMessage = "\nBD Education Result App অ্যাপটি ডাউনলোড করুন\n\n";
                     shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID + "\n\n";
                     shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
                     startActivity(Intent.createChooser(shareIntent, "choose one"));
-                    Toast.makeText(this, "শেয়ার করুন!", Toast.LENGTH_SHORT).show();*/
                 } catch (Exception e) {
-                    //e.toString();
+                    Log.e("ERROR",e.toString());
                 }
 
                 break;
 
             case R.id.nav_comment:
                 Toast.makeText(this, "শীগ্রহী আসবে...", Toast.LENGTH_SHORT).show();
-              //  startActivity(new Intent(MainActivity.this,WebActivity.class));
+
                 break;
 
             case R.id.nav_privacy:
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://theholyquranislamicapp.trodev.com/")));
-                Toast.makeText(this, "প্রাইভেসি পলিসি!", Toast.LENGTH_SHORT).show();
+
                 break;
 
             case R.id.nav_rate:
                 try {
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
-                    Toast.makeText(this, "রেটিং দিন!", Toast.LENGTH_SHORT).show();
+
                 } catch (ActivityNotFoundException e) {
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName())));
                 }

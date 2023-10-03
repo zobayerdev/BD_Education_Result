@@ -101,69 +101,59 @@
                 android:paddingEnd="12dp"
                 android:textSize="14sp" />
 
-
-            <EditText
-                android:id="@+id/total_ET"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_margin="15dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/custom_input"
-                android:drawableStart="@drawable/ic_total"
-                android:drawablePadding="12dp"
-                android:ems="10"
-                android:fontFamily="@font/ubuntu_medium"
-                android:hint="Here show your Total...!"
-                android:inputType="text"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:textSize="14sp" />
-
-            <EditText
-                android:id="@+id/avg_ET"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_margin="15dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/custom_input"
-                android:drawableStart="@drawable/ic_grade"
-                android:drawablePadding="12dp"
-                android:ems="10"
-                android:fontFamily="@font/ubuntu_medium"
-                android:hint="Here show your Average...!"
-                android:inputType="text"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:textSize="14sp" />
-
-            <EditText
-                android:id="@+id/grade_ET"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_margin="15dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/custom_input"
-                android:drawableStart="@drawable/ic_add"
-                android:drawablePadding="12dp"
-                android:ems="10"
-                android:fontFamily="@font/ubuntu_medium"
-                android:hint="Here show your Grade...!"
-                android:inputType="text"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:textSize="14sp" />
-
             <Button
                 android:id="@+id/btn"
                 android:layout_width="350dp"
                 android:layout_gravity="center"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:text="Calculate"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/black"
                 android:fontFamily="@font/ubuntu_medium"
                 android:textAllCaps="false"
                 />
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:id="@+id/total_ET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    app:drawableStartCompat="@drawable/ic_total"
+                    android:hint="Total: 0.0"
+                    android:padding="10dp"/>
+
+
+                <TextView
+                    android:id="@+id/avg_ET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    app:drawableStartCompat="@drawable/ic_grade"
+                    android:hint="Average: 0.0"
+                    android:padding="10dp"/>
+
+
+                <TextView
+                    android:id="@+id/grade_ET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    app:drawableStartCompat="@drawable/ic_total"
+                    android:hint="CGPA: 0.0"
+                    android:padding="10dp"/>
+
+
+            </LinearLayout>
 
 
         </LinearLayout>

@@ -12,5 +12,14 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="developer_image">DEVELOPER IMAGE</string>
+    <string name="developer">App Developer</string>
+    <string name="developer_name">Name: Md. Zobayer Hasan Nayem</string>
+    <string name="developer_designation">Software Developer of Trodev</string>
+    <string name="developer_about">I am Md. Zobayer Hasan Nayem, Now I am currently studying Computer Science and Technology at Bangladesh University Business and Technology.</string>
+    <string name="developer_address">Address: Mirpur-02, Rupnagar Abasik Area</string>
+    <string name="developer_contact">Contact: +8801615257555</string>
+    <string name="developer_email">Gmail: zobayer.dev@gmail.com</string>
+    <string name="call_us">Call Us</string>
 
 </resources>
