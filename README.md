@@ -41,7 +41,7 @@ BUBT - [Md. Zobayer Hasan Nayem](https://github.com/zobayerdev/)
 <p align="center">
 <table align="center">
   <tbody><tr>
-     <td align="center"><a href="https://github.com/zobayerdev"><img alt="" src="https://avatars.githubusercontent.com/zobayerdev" width="125px;"><br><sub><b> Md. Zobayer Hasan Nayem </b></sub></a><br></td> </a></td>
+     <td align="center"><a href="https://github.com/zobayerdev"><img alt="" src="https://avatars.githubusercontent.com/zobayerdev" width="125px;"><br><sub><b> Md. Zobayer Hasan Nayem </b></sub></a><br></td> </tr></td>
 
 </tbody></table>
 

@@ -9,12 +9,13 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="300dp"
-        android:layout_height="340dp"
+        android:layout_height="wrap_content"
         app:cardElevation="50dp"
         app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="15dp">
+        app:cardCornerRadius="12dp">
 
         <LinearLayout
+            android:paddingVertical="16dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -24,14 +25,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:src="@drawable/nayem_image"
-                />
+                android:contentDescription="@string/developer_image" />
 
             <TextView
+                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Developer"
+                android:text="@string/developer"
                 android:textAlignment="center"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:fontFamily="@font/ubuntu_bold"
                 android:textColor="@color/black"
                 />
@@ -39,45 +41,44 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name: Md. Zobayer Hasan Nayem"
-                android:textSize="14sp"
+                android:text="@string/developer_name"
+                android:textSize="16sp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/ubuntu_bold"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:textColor="@color/black"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Software Developer of Trodev"
-                android:textSize="13sp"
-                android:layout_marginTop="10dp"
+                android:text="@string/developer_designation"
+                android:textSize="12sp"
                 android:fontFamily="@font/ubuntu_bold"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:textColor="@color/black"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="I am Md. Zobayer Hasan Nayem, Now I am currently studying Computer Science and Technology at Bangladesh University Business and Technology."
-                android:textSize="10sp"
+                android:text="@string/developer_about"
+                android:textSize="11sp"
                 android:layout_marginTop="10dp"
                 android:layout_margin="10dp"
                 android:fontFamily="@font/ubuntu_bold"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:textColor="@color/black"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Address: Mirpur-02, Rupnagar Abasik Area"
+                android:text="@string/developer_address"
                 android:textSize="11sp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/ubuntu_bold"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:textColor="@color/black"
                 />
 
@@ -85,11 +86,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Contact: +8801615257555"
+                android:text="@string/developer_contact"
                 android:textSize="11sp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/ubuntu_bold"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:textColor="@color/black"
                 android:textIsSelectable="true"
                 />
@@ -97,14 +98,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gmail: zobayer.dev@gmail.com"
+                android:text="@string/developer_email"
                 android:textSize="11sp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/ubuntu_bold"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:textColor="@color/black"
                 android:textIsSelectable="true"
                 />
+
+            <Button
+                android:id="@+id/call_btn"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/call_us"
+                android:textAllCaps="false"/>
 
         </LinearLayout>
 
