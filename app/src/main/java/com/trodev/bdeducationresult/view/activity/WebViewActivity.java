@@ -77,7 +77,7 @@ public class WebViewActivity extends AppCompatActivity {
         webview.getSettings().setAllowFileAccess(true);
         webview.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
         webview.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
-        webview.getSettings().setAppCacheEnabled(true);
+        // webview.getSettings().setAppCacheEnabled(true);
         webview.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
         webSettings.setDomStorageEnabled(true);
         webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
