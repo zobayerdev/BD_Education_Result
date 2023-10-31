@@ -3,6 +3,7 @@ package com.trodev.bdeducationresult.view.activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.cardview.widget.CardView;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         nu = findViewById(R.id.nu);
         mbbs = findViewById(R.id.mbbs);
         cgpa = findViewById(R.id.cgpa);
+
 
         psc.setOnClickListener(new View.OnClickListener() {
             @Override
